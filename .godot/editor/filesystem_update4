@@ -1,0 +1,8 @@
+res://player/player.tscn
+res://game.tscn
+res://mob/bat.tscn
+res://mob/bat.gd
+res://player/player.gd
+res://game.gd
+res://mob/spawner/mob_spawner.tscn
+res://mob/spawner/mob_spawner.gd

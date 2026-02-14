@@ -1,0 +1,40 @@
+GDRE Tools v2.4.0
+Windows 10.0.26200, NVIDIA GeForce RTX 5070 Laptop GPU, vulkan
+Opening file: ~/\Downloads\Godot_v4.6-stable_win64.exe\ULTRABOOM.pck
+Loaded 41 imported files
+Detected Engine Version: 4.5.1
+Detected Bytecode Revision: 4.5.0-stable (ebc36a7)
+Verified 148 files, no errors detected!
+Extracted 148 files, no errors detected!
+
+Exporting scenes...
+*** Exporting 4 scenes took 0.25s
+
+Saved project config.
+
+
+********************************EXPORT REPORT********************************
+
+Totals:                                 
+Decompiled scripts:                     8
+Failed scripts:                         0
+Imported resources for export session:  41
+Successfully converted:                 41
+Lossy:                                  8
+Rewrote metadata:                       16
+Non-importable conversions:             0
+Not converted:                          0
+Failed conversions:                     0
+-------------
+
+
+
+------------------------------------------------------------------------------------
+
+Use Godot editor version 4.5.1 to edit the project.
+Note: the project may be using a custom version of Godot. Detection for this has not been implemented yet.
+If you find that you have many non-import errors upon opening the project 
+(i.e. scripts or shaders have many errors), use the original game's binary as the export template.
+
+*******************************************************************************
+

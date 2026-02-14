@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dq8ti1mdhe36x"]
+
+[ext_resource type="Script" uid="uid://bhjd5evmslq31" path="res://mob/bat.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://13ulf5csgffg" path="res://mob/bat/bat_model.tscn" id="2"]
+[ext_resource type="AudioStream" uid="uid://bx3idpeigglls" path="res://mob/mob_take_damage.wav" id="3"]
+[ext_resource type="AudioStream" uid="uid://bjajl884tgyrw" path="res://mob/mob_ko.wav" id="4"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_04oik"]
+radius = 0.3711088
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_ix7ft"]
+radius = 0.37328094
+
+[node name="Bat" type="RigidBody3D" unique_id=504603185]
+collision_layer = 258
+collision_mask = 258
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=164748111]
+shape = SubResource("SphereShape3D_04oik")
+
+[node name="bat_model" parent="." unique_id=206589802 instance=ExtResource("2")]
+unique_name_in_owner = true
+
+[node name="PuffTimer" type="Timer" parent="." unique_id=1815402473]
+unique_name_in_owner = true
+wait_time = 3.5
+one_shot = true
+
+[node name="HurtPlayer" type="AudioStreamPlayer3D" parent="." unique_id=872019991]
+unique_name_in_owner = true
+stream = ExtResource("3")
+
+[node name="DiedPlayer" type="AudioStreamPlayer3D" parent="." unique_id=1286404985]
+unique_name_in_owner = true
+stream = ExtResource("4")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=2067610995]
+collision_layer = 514
+collision_mask = 515
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1432643357]
+shape = SubResource("SphereShape3D_ix7ft")
+
+[connection signal="timeout" from="PuffTimer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]

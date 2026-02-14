@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://bv74jyf37o8k"]
+
+[ext_resource type="Script" uid="uid://dwfif4t1mvdj8" path="res://player/player.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://chjrhhjvxun3r" path="res://player/simple_gun/gun_model.glb" id="2"]
+[ext_resource type="Script" uid="uid://32nfeqyqxlh4" path="res://player/simple_gun/gun.gd" id="3"]
+[ext_resource type="AudioStream" uid="uid://bi6ansiu0g7gi" path="res://player/gun_shoot.wav" id="4"]
+[ext_resource type="Texture2D" uid="uid://cuyh8hew637ju" path="res://player/reticle.png" id="5"]
+[ext_resource type="LabelSettings" uid="uid://dh6j68tlc4bg4" path="res://assets/Labels.tres" id="6_g6k8r"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
+
+[sub_resource type="Animation" id="Animation_g6k8r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, -3.1415925, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_qjkh3"]
+resource_name = "recoil"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -3.1415925, 0), Vector3(-0.34906584, -3.1415927, 0), Vector3(0, -3.1415927, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_boad6"]
+_data = {
+&"RESET": SubResource("Animation_g6k8r"),
+&"recoil": SubResource("Animation_qjkh3")
+}
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_rkbax"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rkbax"]
+albedo_color = Color(0, 0.41793033, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_yw30f"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qjkh3"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="Player" type="CharacterBody3D" unique_id=1122840936]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.014159918, 0)
+collision_layer = 769
+collision_mask = 769
+script = ExtResource("1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=767854341]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_u8vuu")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=55159971]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5073901, -0.0062410235)
+fov = 90.0
+
+[node name="GunModel" parent="Camera3D" unique_id=1160157892 instance=ExtResource("2")]
+unique_name_in_owner = true
+transform = Transform3D(-0.29999998, 0, -4.5298737e-08, 0, 0.29999995, 0, 4.5298737e-08, 0, -0.29999998, 0.45169675, -0.2876165, -0.44492924)
+script = ExtResource("3")
+center_position = Vector3(0, -0.15, -0.5)
+
+[node name="Marker3D" type="Marker3D" parent="Camera3D/GunModel" unique_id=34948603]
+unique_name_in_owner = true
+transform = Transform3D(0.99999994, 0, -1.4210855e-14, 0, 0.9999999, 0, 1.4210855e-14, 0, 0.99999994, -2.3841858e-07, 0, 0.5424526)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Camera3D/GunModel" unique_id=1428575529]
+stream = ExtResource("4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera3D/GunModel" unique_id=1355656598]
+libraries/ = SubResource("AnimationLibrary_boad6")
+
+[node name="CooldownTimer" type="Timer" parent="Camera3D/GunModel" unique_id=1275048593]
+unique_name_in_owner = true
+wait_time = 0.15
+one_shot = true
+
+[node name="AudioListener3D" type="AudioListener3D" parent="Camera3D" unique_id=451165035]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.107390165, 0.0062410235)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1605930643]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_rkbax")
+surface_material_override/0 = SubResource("StandardMaterial3D_rkbax")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D" unique_id=966465838]
+transform = Transform3D(-2.1264674e-08, -0.48647904, 0, 0.48647904, -2.1264674e-08, 0, 0, 0, 0.48647904, 0, 0.39579034, -0.21063706)
+mesh = SubResource("CapsuleMesh_yw30f")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_qjkh3")
+
+[node name="IFramesTimer" type="Timer" parent="." unique_id=345612340]
+wait_time = 0.5
+one_shot = true
+
+[node name="BHopTimer" type="Timer" parent="." unique_id=781064218]
+unique_name_in_owner = true
+one_shot = true
+
+[node name="Reticle" type="TextureRect" parent="." unique_id=1024608559]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="SpdLabel" type="Label" parent="." unique_id=1478112532]
+unique_name_in_owner = true
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -415.0
+offset_top = -69.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Speed: 6m/s"
+label_settings = ExtResource("6_g6k8r")
+
+[connection signal="timeout" from="IFramesTimer" to="." method="_on_i_frames_timer_timeout"]

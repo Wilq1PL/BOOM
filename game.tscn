@@ -1,0 +1,338 @@
+[gd_scene format=3 uid="uid://dikjhym61hbdm"]
+
+[ext_resource type="Script" uid="uid://b7ucr2v5ptlq1" path="res://game.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://bv74jyf37o8k" path="res://player/player.tscn" id="2"]
+[ext_resource type="Material" uid="uid://dlshqbklhrfse" path="res://assets/RedFloor.tres" id="3"]
+[ext_resource type="Material" uid="uid://bcmjgnj23t78d" path="res://assets/GrayPlatform.tres" id="4"]
+[ext_resource type="PackedScene" uid="uid://by2aoldt1u7fc" path="res://mob/spawner/mob_spawner.tscn" id="5"]
+[ext_resource type="LabelSettings" uid="uid://dh6j68tlc4bg4" path="res://assets/Labels.tres" id="6"]
+[ext_resource type="AudioStream" uid="uid://cwudeva1iqfrx" path="res://assets/Unstoppable Force [tkLVbp0IH_E].mp3" id="7"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_7jktm"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eow3j"]
+size = Vector3(1, 37, 69)
+
+[sub_resource type="Environment" id="Environment_80nbo"]
+background_mode = 1
+background_color = Color(0.11764706, 0, 0, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.7529412, 0.6862745, 0.64705884, 1)
+tonemap_mode = 2
+fog_enabled = true
+fog_light_color = Color(0.22225624, 1.5492085e-07, 5.4147094e-08, 1)
+fog_density = 0.0055
+fog_height = -0.4
+fog_height_density = 0.35
+
+[sub_resource type="LabelSettings" id="LabelSettings_eow3j"]
+font_size = 90
+font_color = Color(1, 0, 0, 1)
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_j5wjh"]
+font_size = 90
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vef74"]
+font_size = 90
+
+[node name="Game" type="Node3D" unique_id=33407295]
+script = ExtResource("1")
+
+[node name="Killplane" type="Area3D" parent="." unique_id=70020194]
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Killplane" unique_id=182339382]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -9, 0)
+shape = SubResource("WorldBoundaryShape3D_7jktm")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Killplane" unique_id=127124706]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.516011, -1, 1.1894255)
+shape = SubResource("BoxShape3D_eow3j")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Killplane" unique_id=313021778]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 14.9679785, -2, 30.378853)
+shape = SubResource("BoxShape3D_eow3j")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Killplane" unique_id=46813484]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 45.45197, -2, 2.0682755)
+shape = SubResource("BoxShape3D_eow3j")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Killplane" unique_id=2105975192]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 14.967975, -3, -27.621151)
+shape = SubResource("BoxShape3D_eow3j")
+
+[node name="Player" parent="." unique_id=1792238380 instance=ExtResource("2")]
+unique_name_in_owner = true
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0.014159918, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=509552975]
+transform = Transform3D(0.3980251, 0.87385017, -0.27921674, -0.66539025, 0.48452705, 0.5678815, 0.6315314, -0.040242985, 0.7743053, 11.988439, 11, 0)
+light_color = Color(0.9908436, 0.4173217, 0.349233, 1)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=40797724]
+environment = SubResource("Environment_80nbo")
+
+[node name="World" type="Node" parent="." unique_id=1239257188]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="World" unique_id=2031190715]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.5, 0)
+use_collision = true
+collision_layer = 255
+size = Vector3(10, 15, 10)
+material = ExtResource("3")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="World" unique_id=1785603158]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -8)
+use_collision = true
+collision_layer = 3
+size = Vector3(7, 1, 3)
+material = ExtResource("4")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="World" unique_id=71082341]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 8.5)
+use_collision = true
+collision_layer = 3
+size = Vector3(7, 1, 4)
+material = ExtResource("4")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="World" unique_id=1875073436]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, -0.5, 4)
+use_collision = true
+collision_layer = 3
+size = Vector3(8, 1, 3)
+material = ExtResource("4")
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="World" unique_id=1358196353]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.5, -0.5, -1)
+use_collision = true
+collision_layer = 3
+size = Vector3(1, 1, 3)
+material = ExtResource("4")
+
+[node name="CSGBox3D20" type="CSGBox3D" parent="World" unique_id=222917195]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, -0.5, -1)
+use_collision = true
+collision_layer = 3
+size = Vector3(2, 1, 3)
+material = ExtResource("4")
+
+[node name="CSGBox3D16" type="CSGBox3D" parent="World" unique_id=670523251]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -0.5, 4)
+use_collision = true
+collision_layer = 3
+size = Vector3(2, 1, 3)
+material = ExtResource("4")
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="World" unique_id=1743220425]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -0.5, 8.5)
+use_collision = true
+collision_layer = 3
+size = Vector3(2, 1, 2)
+material = ExtResource("4")
+
+[node name="CSGBox3D17" type="CSGBox3D" parent="World" unique_id=851781578]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, -0.5, -7)
+use_collision = true
+collision_layer = 3
+size = Vector3(3, 1, 5)
+material = ExtResource("4")
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="World" unique_id=555257825]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -0.5, -1)
+use_collision = true
+collision_layer = 3
+size = Vector3(3, 1, 2)
+material = ExtResource("4")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="World" unique_id=1965913885]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, -0.5, 9)
+use_collision = true
+collision_layer = 3
+size = Vector3(8, 1, 3)
+material = ExtResource("4")
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="World" unique_id=74390429]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5, -0.5, 17.5)
+use_collision = true
+collision_layer = 3
+size = Vector3(3, 1, 6)
+material = ExtResource("4")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="World" unique_id=2013135242]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -0.49999997, -16)
+use_collision = true
+collision_layer = 3
+size = Vector3(3, 1, 7)
+material = ExtResource("4")
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="World" unique_id=2138788347]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, -0.49999997, -16)
+use_collision = true
+collision_layer = 3
+size = Vector3(3, 1, 7)
+material = ExtResource("4")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="World" unique_id=891635001]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -7.5, 17.5)
+use_collision = true
+collision_layer = 3
+size = Vector3(24, 15, 11)
+material = ExtResource("3")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="World" unique_id=2125821544]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.5, -7.5, 17.5)
+use_collision = true
+collision_layer = 3
+size = Vector3(11, 15, 11)
+material = ExtResource("3")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="World" unique_id=1199900337]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, -7.5, -10)
+use_collision = true
+collision_layer = 3
+size = Vector3(14, 15, 22)
+material = ExtResource("3")
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="World" unique_id=184027146]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.999999, -7.5, -1)
+use_collision = true
+collision_layer = 3
+size = Vector3(3, 15, 3)
+material = ExtResource("3")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="World" unique_id=129242788]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, -7.5, -16)
+use_collision = true
+collision_layer = 3
+size = Vector3(17, 15, 10)
+material = ExtResource("3")
+
+[node name="CSGBox3D19" type="CSGBox3D" parent="World" unique_id=1418332947]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.499998, -7.5, -7.5)
+use_collision = true
+collision_layer = 3
+size = Vector3(4, 15, 6)
+material = ExtResource("3")
+
+[node name="CSGBox3D21" type="CSGBox3D" parent="World" unique_id=516887411]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.999996, -7.5, 6)
+use_collision = true
+collision_layer = 3
+size = Vector3(6, 15, 6)
+material = ExtResource("3")
+
+[node name="CSGBox3D22" type="CSGBox3D" parent="World" unique_id=1627421828]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.999998, -7.5, -6)
+use_collision = true
+collision_layer = 3
+size = Vector3(3, 15, 3)
+material = ExtResource("3")
+
+[node name="Spawners" type="Node" parent="." unique_id=2131180596]
+
+[node name="MobSpawner" parent="Spawners" unique_id=120181219 instance=ExtResource("5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.826366, 0.70000005, -4.1480637)
+
+[node name="MobSpawner3" parent="Spawners" unique_id=254123071 instance=ExtResource("5")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, 4.626365, 0.70000005, -19.148062)
+
+[node name="MobSpawner4" parent="Spawners" unique_id=1088851576 instance=ExtResource("5")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.426363, 0.70000005, 21.951939)
+
+[node name="Labels" type="Node" parent="." unique_id=62984800]
+
+[node name="ScoreLabel" type="Label" parent="Labels" unique_id=556180453]
+unique_name_in_owner = true
+anchors_preset = -1
+anchor_top = -0.029320987
+anchor_right = 0.20225695
+anchor_bottom = -0.029320987
+offset_left = 50.0
+offset_top = 56.0
+offset_right = 291.0
+offset_bottom = 144.0
+text = "Score: 0"
+label_settings = ExtResource("6")
+metadata/_edit_use_anchors_ = true
+
+[node name="HealthLabel" type="Label" parent="Labels" unique_id=1020002261]
+unique_name_in_owner = true
+offset_left = 50.0
+offset_top = 97.0
+offset_right = 522.0
+offset_bottom = 166.0
+text = "Health: 5"
+label_settings = ExtResource("6")
+
+[node name="GameOverLabel" type="Label" parent="Labels" unique_id=1232295252]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -281.0
+offset_right = 281.0
+offset_bottom = 124.0
+grow_horizontal = 2
+text = "Game Over!!!"
+label_settings = SubResource("LabelSettings_eow3j")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GameOverTextLabel" type="Label" parent="Labels" unique_id=1405265210]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -527.0
+offset_top = -62.0
+offset_right = 527.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Oh no! The bats got you!
+Your Score: 0
+Press LMB to restart."
+label_settings = SubResource("LabelSettings_j5wjh")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WelcomeLabel" type="Label" parent="Labels" unique_id=1956388124]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -506.5
+offset_top = -142.75
+offset_right = 506.5
+offset_bottom = 142.75
+grow_horizontal = 2
+grow_vertical = 2
+text = "Welcome to the BOOM.
+Pres LMB to start."
+label_settings = SubResource("LabelSettings_vef74")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UltrakoolMusicPlayer" type="AudioStreamPlayer" parent="." unique_id=46353587]
+stream = ExtResource("7")
+volume_db = -12.5
+
+[connection signal="player_died" from="." to="." method="_on_player_died"]
+[connection signal="player_died" from="." to="Player" method="_on_game_player_died"]
+[connection signal="start_game" from="." to="." method="_on_start_game"]
+[connection signal="start_game" from="." to="Player" method="_on_game_start_game"]
+[connection signal="body_entered" from="Killplane" to="." method="_on_killplane_body_entered"]
+[connection signal="deal_damage_to_player" from="Player" to="." method="_on_player_deal_damage_to_player"]
+[connection signal="mob_spawned" from="Spawners/MobSpawner" to="." method="_on_mob_spawner_mob_spawned"]
+[connection signal="mob_spawned" from="Spawners/MobSpawner3" to="." method="_on_mob_spawner_mob_spawned"]
+[connection signal="mob_spawned" from="Spawners/MobSpawner4" to="." method="_on_mob_spawner_mob_spawned"]
