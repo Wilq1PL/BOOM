@@ -30,7 +30,7 @@ func _physics_process(_delta: float) -> void :
     if player_inside == false:
         return
     else:
-        print("trying to take damage")
+        #print("trying to take damage")
         player.try_take_damage(1)
 
 

@@ -75,6 +75,7 @@ doom={
 
 [rendering]
 
+renderer/rendering_method="mobile"
 scaling_3d/mode=2
 scaling_3d/mode.ios=2
 scaling_3d/mode.macos=2

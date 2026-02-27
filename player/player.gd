@@ -1,7 +1,8 @@
 extends CharacterBody3D
 
 const BASESPEED = 6.0
-const MAXSPEED = 15.0
+const MAXSPEED = 13.0
+const BASECDTIME = 0.15
 
 signal deal_damage_to_player(amount)
 
@@ -26,12 +27,21 @@ var sensitivity_x = 0.2
 @onready var b_hop_timer: Timer = %BHopTimer
 @onready var reticle: TextureRect = %Reticle
 @onready var spd_label: Label = %SpdLabel
+@onready var puptimer: Timer = %Poweruptimer
+@onready var puplabel: Label = %Puplabel
+@onready var gplabel: Label = %Gamepausedlabel
+
 
 
 func _ready():
+    cd_timer.wait_time = 0.15
     spd_label.hide()
     reticle.hide()
+    puplabel.hide()
+    gplabel.hide()
+    
     Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+    
 func _unhandled_input(event):
     if pause == true:
         pass
@@ -50,6 +60,7 @@ func _unhandled_input(event):
         Engine.time_scale = 0.0
         if pause == false:
             pause = true
+            gplabel.show()
         else:
             get_tree().quit()
 
@@ -57,10 +68,15 @@ func _unhandled_input(event):
     elif event.is_action_pressed("shoot"):
         Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
         pause = false
+        gplabel.hide()
         Engine.time_scale = 1.0
 
+func _process(delta: float) -> void:
+    puplabel.set_text("Power up time left: " + str(snapped(puptimer.time_left, 0.1))  + "s")
+    
 func _physics_process(delta):
 
+    
     var inputDirection2D = Input.get_vector(
         "move_left", "move_right", "move_forward", "move_back"
     )
@@ -126,8 +142,20 @@ func _on_i_frames_timer_timeout() -> void :
 
 func _on_game_player_died() -> void:
     reticle.hide()
+    puplabel.hide()
+    spd_label.hide()
 
 
 func _on_game_start_game() -> void:
     spd_label.show()
     reticle.show()
+    puplabel.show()
+
+
+func _on_powerup_orb_collected() -> void:
+    cd_timer.wait_time = BASECDTIME - 0.05
+    puptimer.start()
+
+
+func _on_poweruptimer_timeout() -> void:
+    cd_timer.wait_time = BASECDTIME

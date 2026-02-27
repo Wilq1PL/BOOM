@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://by2aoldt1u7fc" path="res://mob/spawner/mob_spawner.tscn" id="5"]
 [ext_resource type="LabelSettings" uid="uid://dh6j68tlc4bg4" path="res://assets/Labels.tres" id="6"]
 [ext_resource type="AudioStream" uid="uid://cwudeva1iqfrx" path="res://assets/Unstoppable Force [tkLVbp0IH_E].mp3" id="7"]
+[ext_resource type="PackedScene" uid="uid://yoqaj0kj80bi" path="res://powerup.tscn" id="8_j5wjh"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_7jktm"]
 
@@ -233,6 +234,13 @@ collision_layer = 3
 size = Vector3(3, 15, 3)
 material = ExtResource("3")
 
+[node name="CSGBox3D23" type="CSGBox3D" parent="World" unique_id=402442319]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.399996, -7.5, 6.1)
+use_collision = true
+collision_layer = 3
+size = Vector3(4, 15, 5.4)
+material = ExtResource("3")
+
 [node name="Spawners" type="Node" parent="." unique_id=2131180596]
 
 [node name="MobSpawner" parent="Spawners" unique_id=120181219 instance=ExtResource("5")]
@@ -327,6 +335,10 @@ vertical_alignment = 1
 stream = ExtResource("7")
 volume_db = -12.5
 
+[node name="Powerup" parent="." unique_id=1246467619 instance=ExtResource("8_j5wjh")]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 1, 6)
+
 [connection signal="player_died" from="." to="." method="_on_player_died"]
 [connection signal="player_died" from="." to="Player" method="_on_game_player_died"]
 [connection signal="start_game" from="." to="." method="_on_start_game"]
@@ -336,3 +348,8 @@ volume_db = -12.5
 [connection signal="mob_spawned" from="Spawners/MobSpawner" to="." method="_on_mob_spawner_mob_spawned"]
 [connection signal="mob_spawned" from="Spawners/MobSpawner3" to="." method="_on_mob_spawner_mob_spawned"]
 [connection signal="mob_spawned" from="Spawners/MobSpawner4" to="." method="_on_mob_spawner_mob_spawned"]
+[connection signal="orb_collected" from="Powerup" to="Player" method="_on_powerup_orb_collected"]
+[connection signal="body_entered" from="Powerup/Area3D" to="Powerup" method="_on_area_3d_body_entered"]
+[connection signal="timeout" from="Powerup/Timer" to="Powerup" method="_on_timer_timeout"]
+
+[editable path="Powerup"]

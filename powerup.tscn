@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://yoqaj0kj80bi"]
+
+[ext_resource type="Script" uid="uid://dddrcw6l2b7ub" path="res://powerup.gd" id="1_vcqqu"]
+[ext_resource type="Shader" uid="uid://dgsxblpn1wu1i" path="res://assets/power_up.gdshader" id="2_wh0le"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_kyvak"]
+radius = 1.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6cuax"]
+render_priority = 0
+shader = ExtResource("2_wh0le")
+shader_parameter/Color = Color(1, 0.7137255, 0, 1)
+shader_parameter/glow_color = Color(1, 1, 0, 1)
+shader_parameter/dist = 1.0
+shader_parameter/speed = 1.0
+shader_parameter/glow_intensity = 0.5
+shader_parameter/glow_amount = 0.4
+shader_parameter/posMult = 0.15
+
+[sub_resource type="SphereMesh" id="SphereMesh_wh0le"]
+material = SubResource("ShaderMaterial_6cuax")
+
+[node name="Powerup" type="Node3D" unique_id=1246467619]
+script = ExtResource("1_vcqqu")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1775346959]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1884351636]
+shape = SubResource("SphereShape3D_kyvak")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=369076965]
+transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, 0, 0, 0)
+mesh = SubResource("SphereMesh_wh0le")
+
+[node name="Timer" type="Timer" parent="." unique_id=1015553988]
+wait_time = 20.0
+one_shot = true

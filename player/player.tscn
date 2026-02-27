@@ -58,6 +58,11 @@ albedo_color = Color(0, 0.41793033, 0, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qjkh3"]
 albedo_color = Color(0, 0, 0, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_g6k8r"]
+font_size = 140
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
 [node name="Player" type="CharacterBody3D" unique_id=1122840936]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.014159918, 0)
 collision_layer = 769
@@ -116,24 +121,14 @@ one_shot = true
 unique_name_in_owner = true
 one_shot = true
 
-[node name="Reticle" type="TextureRect" parent="." unique_id=1024608559]
+[node name="Poweruptimer" type="Timer" parent="." unique_id=650504923]
 unique_name_in_owner = true
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -25.0
-offset_top = -25.0
-offset_right = 25.0
-offset_bottom = 25.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("5")
-expand_mode = 1
-metadata/_edit_use_anchors_ = true
+wait_time = 15.0
+one_shot = true
 
-[node name="SpdLabel" type="Label" parent="." unique_id=1478112532]
+[node name="Labels" type="Node" parent="." unique_id=1964228845]
+
+[node name="SpdLabel" type="Label" parent="Labels" unique_id=1478112532]
 unique_name_in_owner = true
 anchors_preset = 3
 anchor_left = 1.0
@@ -150,4 +145,52 @@ label_settings = ExtResource("6_g6k8r")
 horizontal_alignment = 2
 vertical_alignment = 2
 
+[node name="Puplabel" type="Label" parent="Labels" unique_id=1759577289]
+unique_name_in_owner = true
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -592.0
+offset_top = -144.0
+offset_right = -26.0
+offset_bottom = -57.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Power up time left: 0.0s"
+label_settings = ExtResource("6_g6k8r")
+
+[node name="Gamepausedlabel" type="Label" parent="Labels" unique_id=1544163348]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -471.5
+offset_right = 471.5
+offset_bottom = 303.0
+grow_horizontal = 2
+text = "Game paused"
+label_settings = SubResource("LabelSettings_g6k8r")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Reticle" type="TextureRect" parent="Labels" unique_id=1024608559]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
 [connection signal="timeout" from="IFramesTimer" to="." method="_on_i_frames_timer_timeout"]
+[connection signal="timeout" from="Poweruptimer" to="." method="_on_poweruptimer_timeout"]

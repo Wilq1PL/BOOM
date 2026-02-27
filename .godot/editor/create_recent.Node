@@ -1,2 +1,6 @@
-CollisionShape3D
+Node
 Label
+Timer
+MeshInstance3D
+CollisionShape3D
+Area3D
