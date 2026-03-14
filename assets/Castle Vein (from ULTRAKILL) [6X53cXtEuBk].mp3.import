@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bl01et1delrp3"
+path="res://.godot/imported/Castle Vein (from ULTRAKILL) [6X53cXtEuBk].mp3-ded4fd201b994c910590cd9d4450ac8a.mp3str"
+
+[deps]
+
+source_file="res://assets/Castle Vein (from ULTRAKILL) [6X53cXtEuBk].mp3"
+dest_files=["res://.godot/imported/Castle Vein (from ULTRAKILL) [6X53cXtEuBk].mp3-ded4fd201b994c910590cd9d4450ac8a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

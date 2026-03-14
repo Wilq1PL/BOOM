@@ -1,10 +1,5 @@
-res://powerup.tscn
+res://game.gd
 res://game.tscn
-res://powerup.gd
-res://player/player.gd
-res://player/player.tscn
-res://mob/bat.gd
-res://mob/spawner/mob_spawner.tscn
 res://mob/spawner/spawner_halo.gdshader
-res://assets/pupshader.gdshader
 res://assets/power_up.gdshader
+res://player/player.tscn

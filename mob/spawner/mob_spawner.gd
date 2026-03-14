@@ -6,7 +6,6 @@ signal mob_spawned(mob)
 
 @onready var marker: Marker3D = $Marker3D
 @onready var timer: Timer = $Timer
-
 func _ready() -> void:
     pass
 
@@ -16,4 +15,8 @@ func _on_timer_timeout() -> void :
     new_mob.global_position = marker.global_position
     new_mob.set_global_rotation_degrees(Vector3(0.0, 180.0, 0.0))
     mob_spawned.emit(new_mob)
-    timer.wait_time = randf_range(3.74, 4.25)
+
+
+func _on_game_make_game_harder() -> void:
+    if timer.wait_time >= 0.75:
+        timer.wait_time -= 0.5

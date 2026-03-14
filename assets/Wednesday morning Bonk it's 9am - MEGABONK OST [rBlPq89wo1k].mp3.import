@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c3p5xe3rpmcl7"
+path="res://.godot/imported/Wednesday morning Bonk it's 9am - MEGABONK OST [rBlPq89wo1k].mp3-5be12bd2864500b498b645bbb963242b.mp3str"
+
+[deps]
+
+source_file="res://assets/Wednesday morning Bonk it's 9am - MEGABONK OST [rBlPq89wo1k].mp3"
+dest_files=["res://.godot/imported/Wednesday morning Bonk it's 9am - MEGABONK OST [rBlPq89wo1k].mp3-5be12bd2864500b498b645bbb963242b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

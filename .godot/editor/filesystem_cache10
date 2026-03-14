@@ -1,28 +1,40 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1772225700
+::res://::1773509425
 Been.png::CompressedTexture2D::5232684018887214410::1771112746::1771112789::1::::<><><>0<>0<>bc44ee87e9feb6a8c0f1b66deba2d527<>res://.godot/imported/Been.png-6e4577645dd02933c2a9686bc6cc5ef0.ctex::
-export_presets.cfg::TextFile::-1::1771112860::0::1::::<><><>0<>0<><>::
-game.gd::GDScript::4673904479628463470::1771112255::0::1::::<>Node3D<><>0<>0<><>::
-game.tscn::PackedScene::7741976811757968174::1772225308::0::1::::<><><>0<>0<><>::uid://b7ucr2v5ptlq1::::res://game.gd<>uid://bv74jyf37o8k::::res://player/player.tscn<>uid://dlshqbklhrfse::::res://assets/RedFloor.tres<>uid://bcmjgnj23t78d::::res://assets/GrayPlatform.tres<>uid://by2aoldt1u7fc::::res://mob/spawner/mob_spawner.tscn<>uid://dh6j68tlc4bg4::::res://assets/Labels.tres<>uid://cwudeva1iqfrx::::res://assets/Unstoppable Force [tkLVbp0IH_E].mp3<>uid://yoqaj0kj80bi::::res://powerup.tscn
+export_presets.cfg::TextFile::-1::1773443766::0::1::::<><><>0<>0<><>::
+game.gd::GDScript::4673904479628463470::1773509333::0::1::::<>Node3D<><>0<>0<><>::
+game.tscn::PackedScene::7741976811757968174::1773509333::0::1::::<><><>0<>0<><>::uid://b7ucr2v5ptlq1::::res://game.gd<>uid://bv74jyf37o8k::::res://player/player.tscn<>uid://dlshqbklhrfse::::res://assets/RedFloor.tres<>uid://bcmjgnj23t78d::::res://assets/GrayPlatform.tres<>uid://by2aoldt1u7fc::::res://mob/spawner/mob_spawner.tscn<>uid://dh6j68tlc4bg4::::res://assets/Labels.tres<>uid://x3hbinmpuea8::::res://assets/Heart_green.png<>uid://n8bp5cg4oj::::res://assets/Skull.png<>uid://yoqaj0kj80bi::::res://powerup.tscn<>uid://coqxlfwu3dbpw::::res://assets/Blood_Blur_1.png<>uid://bmfl5l71afmxv::::res://assets/The Fire Is Gone (For Piano, Saxophone and Trumpet) [917xijnpJVw].mp3<>uid://bu4y02g0p7fey::::res://assets/DIE! THY END IS NOW! CRUSH! PERPARE THYSELF! WEAK! (but higher quality) [XeVBnxWXoOk].mp3
 gdre_export.log::TextFile::-1::1771106863::0::1::::<><><>0<>0<><>::
 killplane.gd::GDScript::3764947246154827084::1771106862::0::1::::<>Area3D<><>0<>0<><>::
-powerup.gd::GDScript::7377058679659007105::1772223634::0::1::::<>Node3D<><>0<>0<><>::
-powerup.tscn::PackedScene::1714405519551846438::1772225349::0::1::::<><><>0<>0<><>::uid://dddrcw6l2b7ub::::res://powerup.gd
-::res://assets/::1772225711
+powerup.gd::GDScript::7377058679659007105::1773505453::0::1::::<>Node3D<><>0<>0<><>::
+powerup.tscn::PackedScene::1714405519551846438::1772998545::0::1::::<><><>0<>0<><>::uid://dddrcw6l2b7ub::::res://powerup.gd<>uid://dgsxblpn1wu1i::::res://assets/power_up.gdshader
+README.txt::TextFile::-1::1772226432::0::1::::<><><>0<>0<><>::
+::res://assets/::1773507875
 BatMat.tres::StandardMaterial3D::922147139410788769::1771106862::0::1::::<><><>0<>0<><>::uid://ddr8smg2n8cbm::::res://mob/bat/bat_model_bat_palette.png
+Blood_Blur_1.png::CompressedTexture2D::5789931654498887792::1773487978::1773487979::1::::<><><>0<>0<>a2c04b942015bcf876d2667bdde08721<>res://.godot/imported/Blood_Blur_1.png-4bc222ecdfb6cf9b96b4b7723f35ab54.ctex::
+Castle Vein (from ULTRAKILL) [6X53cXtEuBk].mp3::AudioStreamMP3::3211694230801171030::1773507875::1773507875::1::::<><><>0<>0<>943d6c7fad31c858bb8b489a6022cf38<>res://.godot/imported/Castle Vein (from ULTRAKILL) [6X53cXtEuBk].mp3-ded4fd201b994c910590cd9d4450ac8a.mp3str::
+DIE! THY END IS NOW! CRUSH! PERPARE THYSELF! WEAK! (but higher quality) [XeVBnxWXoOk].mp3::AudioStreamMP3::3851567792551974468::1773506518::1773506518::1::::<><><>0<>0<>4ceaf665a69f86ee9101a521386e85de<>res://.godot/imported/DIE! THY END IS NOW! CRUSH! PERPARE THYSELF! WEAK! (but higher quality) [XeVBnxWXoOk].mp3-e5692d0dbe4a24939178b6b123ec11fb.mp3str::
+Doom Eternal OST - The Only Thing They Fear Is You (Mick Gordon) [Doom Eternal Theme] [kpnW68Q8ltc].mp3::AudioStreamMP3::2025570343533849859::1773505094::1773505094::1::::<><><>0<>0<>02c428ca3e2f264420f4a3d026fdfcea<>res://.godot/imported/Doom Eternal OST - The Only Thing They Fear Is You (Mick Gordon) [Doom Eternal Theme] [kpnW68Q8ltc].mp3-d4f45de5f69ba6c6d0c2cca6bcfb16c7.mp3str::
+Doom OST - BFG Division [EHM2OIcG8Ok].mp3::AudioStreamMP3::6300453116135409459::1773507690::1773507690::1::::<><><>0<>0<>6651d26d2c637cb29bb5b963f0aacfa3<>res://.godot/imported/Doom OST - BFG Division [EHM2OIcG8Ok].mp3-cd926b07b1fd7f9c8ff6882bf800e21b.mp3str::
+Doom OST - Rip & Tear [vyA1z2A-lhU].mp3::AudioStreamMP3::3777117236909219352::1773507690::1773507690::1::::<><><>0<>0<>75ed7fc70a73f705b665c2313b9b9e0f<>res://.godot/imported/Doom OST - Rip & Tear [vyA1z2A-lhU].mp3-d65866ca8a02f0d7bd6f2b5e73f0d756.mp3str::
 GrayPlatform.tres::StandardMaterial3D::2552128769687961053::1771106862::0::1::::<><><>0<>0<><>::uid://bos7rridjkps1::::res://level/checkboard.png
+Heart_green.png::CompressedTexture2D::1672573226367008129::1773501306::1773501307::1::::<><><>0<>0<>c98c0f2716c6db256839ac7fd3fa814f<>res://.godot/imported/Heart_green.png-b98542fb65e82867e65c78a11008fe3b.ctex::
 Labels.tres::LabelSettings::7715183242592775061::1771106862::0::1::::<><><>0<>0<><>::
-pupshader.gdshader::Shader::8905893331753028534::1772225711::0::1::::<><><>0<>0<><>::
+power_up.gdshader::Shader::7618952790663318780::1772996297::0::1::::<><><>0<>0<><>::
 RedFloor.tres::StandardMaterial3D::7968951790803791828::1771106862::0::1::::<><><>0<>0<><>::uid://bos7rridjkps1::::res://level/checkboard.png
-power_up.gdshader::Shader::7618952790663318780::1772225764::0::1::::<><><>0<>0<><>::
+Skull.png::CompressedTexture2D::848329166247209::1773503208::1773503215::1::::<><><>0<>0<>179de602f1edf83dadba2fdf45409acc<>res://.godot/imported/Skull.png-db8c5a69a857791b57942c44d7addb8f.ctex::
+Stardew Valley OST - Spring (Wild Horseradish Jam) [7WuKj7a3ces].mp3::AudioStreamMP3::4410711345346306091::1773507875::1773507875::1::::<><><>0<>0<>53efb9a5cf9b4932f51bcad27a3295bf<>res://.godot/imported/Stardew Valley OST - Spring (Wild Horseradish Jam) [7WuKj7a3ces].mp3-92a7e9eb827e47f7dd392af12590df42.mp3str::
+The Fire Is Gone (For Piano, Saxophone and Trumpet) [917xijnpJVw].mp3::AudioStreamMP3::3239730785229491643::1773506146::1773506146::1::::<><><>0<>0<>c81722ee01fcdbd1a38adc686ee34fac<>res://.godot/imported/The Fire Is Gone (For Piano, Saxophone and Trumpet) [917xijnpJVw].mp3-44ea90a085d68fe204dad808f6b4edbc.mp3str::
 Unstoppable Force [tkLVbp0IH_E].mp3::AudioStreamMP3::6358473880841029037::1771106862::1771106862::1::::<><><>0<>0<>6ff83f9307c730bed6009a411ccb772e<>res://.godot/imported/Unstoppable Force [tkLVbp0IH_E].mp3-919250142099bf75353806fd0ec469e9.mp3str::
+Versus [BhEnjxYLBYo].mp3::AudioStreamMP3::9148421852747396758::1773505776::1773505776::1::::<><><>0<>0<>14258e1e57325ddc3498e52dde4d9a7f<>res://.godot/imported/Versus [BhEnjxYLBYo].mp3-bdcf2c9171f1c506770389d291768380.mp3str::
+Wednesday morning Bonk it's 9am - MEGABONK OST [rBlPq89wo1k].mp3::AudioStreamMP3::6770957492745657870::1773504684::1773504684::1::::<><><>0<>0<>9dff098ba849bcce0b4c8cef3c50fce5<>res://.godot/imported/Wednesday morning Bonk it's 9am - MEGABONK OST [rBlPq89wo1k].mp3-5be12bd2864500b498b645bbb963242b.mp3str::
 ::res://level/::1771106862
 checkboard.png::CompressedTexture2D::3408197501867672570::1771106862::1771106862::1::::<><><>0<>0<>9874dd5522945bba79f5ffe3a662b0ee<>res://.godot/imported/checkboard.png-130d133a6029e1ca9a92686e2c703873.s3tc.ctex::
 sky.gdshader::Shader::4491687189778309942::1771106862::0::1::::<><><>0<>0<><>::
 temporary_level.tscn::PackedScene::8279289030407758400::1771106862::0::1::::<><><>0<>0<><>::uid://bos7rridjkps1::::res://level/checkboard.png<>uid://bv74jyf37o8k::::res://player/player.tscn
-::res://mob/::1772224008
-bat.gd::GDScript::2896557956845336266::1772224008::0::1::::<>RigidBody3D<><>0<>0<><>::
-bat.tscn::PackedScene::8351577308676203925::1771108495::0::1::::<><><>0<>0<><>::uid://bhjd5evmslq31::::res://mob/bat.gd<>uid://13ulf5csgffg::::res://mob/bat/bat_model.tscn<>uid://bx3idpeigglls::::res://mob/mob_take_damage.wav<>uid://bjajl884tgyrw::::res://mob/mob_ko.wav
+::res://mob/::1773505447
+bat.gd::GDScript::2896557956845336266::1773505447::0::1::::<>RigidBody3D<><>0<>0<><>::
+bat.tscn::PackedScene::8351577308676203925::1773441203::0::1::::<><><>0<>0<><>::uid://bhjd5evmslq31::::res://mob/bat.gd<>uid://13ulf5csgffg::::res://mob/bat/bat_model.tscn<>uid://bx3idpeigglls::::res://mob/mob_take_damage.wav<>uid://bjajl884tgyrw::::res://mob/mob_ko.wav
 mob_ko.wav::AudioStreamWAV::3018688158695626872::1771106862::1771106862::1::::<><><>0<>0<>b3d8e1976cc8683302039bdcaa23e80b<>res://.godot/imported/mob_ko.wav-a84710604b4b98be9d6d7dfe1978d9ee.sample::
 mob_take_damage.wav::AudioStreamWAV::4059058552206586180::1771106862::1771106862::1::::<><><>0<>0<>2ca51d39858302018fb5fd844e0236c6<>res://.godot/imported/mob_take_damage.wav-1cdfbd77e9c3f3326daadc27788f65ff.sample::
 ::res://mob/bat/::1771106862
@@ -40,22 +52,23 @@ inner_smoke.gdshader::Shader::1771204470865773126::1771106862::0::1::::<><><>0<>
 inner_smoke.tres::ShaderMaterial::8418940712953999849::1771106862::0::1::::<><><>0<>0<><>::uid://0h8qjtcpk0mk::::res://mob/smoke_puff/material/inner_smoke.gdshader
 outer_smoke.gdshader::Shader::1294909137028496112::1771106862::0::1::::<><><>0<>0<><>::
 outer_smoke.tres::ShaderMaterial::6133779181506885685::1771106862::0::1::::<><><>0<>0<><>::uid://spi71y1qu06o::::res://mob/smoke_puff/material/outer_smoke.gdshader
-::res://mob/spawner/::1772225764
-mob_spawner.gd::GDScript::4605053502977157191::1771112307::0::1::::<>Node3D<><>0<>0<><>::
-mob_spawner.tscn::PackedScene::4126716714770266636::1772225711::0::1::::<><><>0<>0<><>::uid://b6uys8q4bt7s2::::res://mob/spawner/mob_spawner.gd<>uid://dq8ti1mdhe36x::::res://mob/bat.tscn<>uid://b6xxr5tn5hbpe::::res://mob/spawner/spawner_model.tscn
-spawner_halo.gdshader::Shader::5152002233564150897::1772225711::0::1::::<><><>0<>0<><>::
+::res://mob/spawner/::1773502896
+mob_spawner.gd::GDScript::4605053502977157191::1773502882::0::1::::<>Node3D<><>0<>0<><>::
+mob_spawner.tscn::PackedScene::4126716714770266636::1773502896::0::1::::<><><>0<>0<><>::uid://b6uys8q4bt7s2::::res://mob/spawner/mob_spawner.gd<>uid://dq8ti1mdhe36x::::res://mob/bat.tscn<>uid://b6xxr5tn5hbpe::::res://mob/spawner/spawner_model.tscn
+spawner_halo.gdshader::Shader::5152002233564150897::1772996297::0::1::::<><><>0<>0<><>::
 spawner_model.glb::PackedScene::3987098323456046551::1771106862::1771106862::1::::<><><>0<>0<>d510da2e2c1c8dc9deadf6fa64d1b843<>res://.godot/imported/spawner_model.glb-2fcf57184c75ae05a59f6df1a9d9c89b.scn::
 spawner_model.tscn::PackedScene::4611183979828307326::1771106862::0::1::::<><><>0<>0<><>::uid://bw2m6rpraye2r::::res://mob/spawner/spawner_model.glb<>uid://cfnwyva3u4qeb::::res://mob/spawner/spawner_halo.gdshader<>uid://bh1ego7bi1olb::::res://mob/spawner/spawner_screen_material.tres
 spawner_screen.gdshader::Shader::7692469377780924794::1771106862::0::1::::<><><>0<>0<><>::
 spawner_screen_material.tres::ShaderMaterial::2931670778317185055::1771106862::0::1::::<><><>0<>0<><>::uid://dhuj314m3wv1c::::res://mob/spawner/spawner_screen.gdshader<>uid://xc2oy7gqkch5::::res://mob/spawner/spawner_text.png
 spawner_text.png::CompressedTexture2D::1620137829390761764::1771106862::1771106862::1::::<><><>0<>0<>2696fb0afe4370c6ea268ac359f84179<>res://.godot/imported/spawner_text.png-cddf989d7fb9d0d1fac3e9ed8d7837e4.s3tc.ctex::
-::res://player/::1772225507
-bullet.gd::GDScript::7136365795945792018::1771106862::0::1::::<>Area3D<><>0<>0<><>::
+::res://player/::1773508760
+bullet.gd::GDScript::7136365795945792018::1773508556::0::1::::<>Area3D<><>0<>0<><>::
 bullet.tscn::PackedScene::1614990503318226752::1771106862::0::1::::<><><>0<>0<><>::uid://c8w55w0d8vshe::::res://player/bullet.gd<>uid://bhmobjnho1cef::::res://player/projectile/projectile_3d.tscn
 gun_shoot.wav::AudioStreamWAV::3011951317215104660::1771106862::1771106862::1::::<><><>0<>0<>74edd6b0a673c2dada322be084ee63f8<>res://.godot/imported/gun_shoot.wav-52147792398daed63da61b6ad9e912dd.sample::
-player.gd::GDScript::8714234718524595015::1772225507::0::1::::<>CharacterBody3D<><>0<>0<><>::
-player.tscn::PackedScene::115536018316383364::1772225507::0::1::::<><><>0<>0<><>::uid://dwfif4t1mvdj8::::res://player/player.gd<>uid://chjrhhjvxun3r::::res://player/simple_gun/gun_model.glb<>uid://32nfeqyqxlh4::::res://player/simple_gun/gun.gd<>uid://bi6ansiu0g7gi::::res://player/gun_shoot.wav<>uid://cuyh8hew637ju::::res://player/reticle.png<>uid://dh6j68tlc4bg4::::res://assets/Labels.tres
+player.gd::GDScript::8714234718524595015::1773508760::0::1::::<>CharacterBody3D<><>0<>0<><>::
+player.tscn::PackedScene::115536018316383364::1773503969::0::1::::<><><>0<>0<><>::uid://dwfif4t1mvdj8::::res://player/player.gd<>uid://chjrhhjvxun3r::::res://player/simple_gun/gun_model.glb<>uid://32nfeqyqxlh4::::res://player/simple_gun/gun.gd<>uid://bi6ansiu0g7gi::::res://player/gun_shoot.wav<>uid://cuyh8hew637ju::::res://player/reticle.png<>uid://c1ygnt1tg6qs::::res://player/spd_label.gd<>uid://dh6j68tlc4bg4::::res://assets/Labels.tres
 reticle.png::CompressedTexture2D::6226647631277323478::1771106862::1771106862::1::::<><><>0<>0<>df58d13b11019c920082ba6ecacd0bd4<>res://.godot/imported/reticle.png-94d8174638f634e8c9dc538a8a25a59b.ctex::
+spd_label.gd::GDScript::195520144833262862::1773427726::0::1::::<>Label<><>0<>0<><>::
 ::res://player/projectile/::1771106862
 projectile.gdshader::Shader::4467489651999064106::1771106862::0::1::::<><><>0<>0<><>::
 projectile_3d.tscn::PackedScene::2903367439031070181::1771106862::0::1::::<><><>0<>0<><>::uid://bl1abdlwirg31::::res://player/projectile/projectile_model.glb<>uid://b4wc5wsyakc0a::::res://player/projectile/projectile.gdshader

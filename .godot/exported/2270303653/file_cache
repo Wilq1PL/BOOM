@@ -1,7 +1,7 @@
 res://assets/BatMat.tres::1d792be04c725a555f539af3ca71cd4a::1771106862::res://.godot/exported/2270303653/export-48c24f671d107e089ed4c1dec186f820-BatMat.res
 res://assets/GrayPlatform.tres::da57edce51cb041e828810e53584ecdc::1771106862::res://.godot/exported/2270303653/export-f25e9c9c670b621f12ee72d77de4a1a1-GrayPlatform.res
 res://assets/Labels.tres::4a605c276dad00afc49f0604c02c0efe::1771106862::res://.godot/exported/2270303653/export-66e93ac2e2d0bb2200f98ee418a830ca-Labels.res
-res://assets/power_up.gdshader::a2cb6989b620e88d056632406132377e::1772225817::
+res://assets/power_up.gdshader::a2cb6989b620e88d056632406132377e::1773509483::
 res://assets/RedFloor.tres::87ca43b6924cc03553d216f11ffedd2c::1771106862::res://.godot/exported/2270303653/export-181fbe5532bc26e6659207bb263db85c-RedFloor.res
 res://assets/Unstoppable Force [tkLVbp0IH_E].mp3::588b0d9e13efacaf66036a2533b6c33d6ff83f9307c730bed6009a411ccb772e::1771106862::
 res://level/checkboard.png::4eddf2cad4c1d90165620a3efaafed309874dd5522945bba79f5ffe3a662b0ee::1771106862::
@@ -18,14 +18,14 @@ res://mob/smoke_puff/poof.res::2e2c6364a8af8418583687ce4b8d106e::1771106862::
 res://mob/smoke_puff/poof_sound.wav::0a6370381807f3c1ba4ca4506b76e70f18d4fcd2e337e2e1f200095312d82388::1771106862::
 res://mob/smoke_puff/smoke_puff.tscn::514b1cb771a4e751715c900db3029c98::1771106862::res://.godot/exported/2270303653/export-57c8b312a3f841c4ffb9a24b41287fa3-smoke_puff.scn
 res://mob/smoke_puff/smoke_sphere.obj::97004c2e0c2ef5bfc9d5c861a4273ab7a786816b96d28c66598442f4741f94c6::1771106862::
-res://mob/spawner/mob_spawner.tscn::99cd971f4cb10fd2b58f36f7ab4d6611::1772225817::res://.godot/exported/2270303653/export-11f9cbac90724b4fdb5ca5d7e91b7cc2-mob_spawner.scn
-res://mob/spawner/spawner_halo.gdshader::882704900f82e52f96b1588555cbb9e8::1772225993::
+res://mob/spawner/mob_spawner.tscn::729a6ebe9872057e7ca8f18c66a11f5d::1773502896::res://.godot/exported/2270303653/export-11f9cbac90724b4fdb5ca5d7e91b7cc2-mob_spawner.scn
+res://mob/spawner/spawner_halo.gdshader::882704900f82e52f96b1588555cbb9e8::1773509483::
 res://mob/spawner/spawner_model.glb::6c0bf09d55b8e887b922b76196b9cd45d510da2e2c1c8dc9deadf6fa64d1b843::1771106862::
 res://mob/spawner/spawner_model.tscn::86130e564372f195798bf3822a25faad::1771106862::res://.godot/exported/2270303653/export-b0def232abb827a4edb50d1f5bdb8455-spawner_model.scn
 res://mob/spawner/spawner_screen.gdshader::77f1506d88ec191a66afce657fae2375::1771106862::
 res://mob/spawner/spawner_screen_material.tres::42c76739dc0d77efc7acfca0051652b4::1771106862::res://.godot/exported/2270303653/export-de85dcc72e83b7639e74c08c7964fd87-spawner_screen_material.res
 res://mob/spawner/spawner_text.png::11ccf98aaf008ad6919b2bc16beb2c662696fb0afe4370c6ea268ac359f84179::1771106862::
-res://mob/bat.tscn::4c3b862c7a63d891a559546366d348fa::1771108495::res://.godot/exported/2270303653/export-c10dd056ade7f04394b398fc8aba58c0-bat.scn
+res://mob/bat.tscn::4c3b862c7a63d891a559546366d348fa::1773441203::res://.godot/exported/2270303653/export-c10dd056ade7f04394b398fc8aba58c0-bat.scn
 res://mob/mob_ko.wav::57c4d1cf1b49a51413bdb132aad66572b3d8e1976cc8683302039bdcaa23e80b::1771106862::
 res://mob/mob_take_damage.wav::1fc7467cfe3d2cf627789e52f72968b12ca51d39858302018fb5fd844e0236c6::1771106862::
 res://player/projectile/projectile.gdshader::c0002f040a7108ac26566e8e3c435a06::1771106862::
@@ -36,8 +36,20 @@ res://player/simple_gun/gun_model_gun_palette.png::0096dd355c17aab24bc35779d4cd2
 res://player/simple_gun/simple_gun_gun_palette.png::f9c59b94af24c59a7c6ff9490823d12c233b40389d35d1360301a1bfde3c7277::1771106862::
 res://player/bullet.tscn::06b022d0ef3e01ded0fbb6e5cfa0cc3f::1771106862::res://.godot/exported/2270303653/export-ccbd35e6f72058f9e5d89a0d1cb3e691-bullet.scn
 res://player/gun_shoot.wav::f8a674f329a24516dab7abd8de52e18674edd6b0a673c2dada322be084ee63f8::1771106862::
-res://player/player.tscn::143c3a7217c75f99d0b6280f661c7a22::1772226316::res://.godot/exported/2270303653/export-753d15e03e0182f9d550ac833b42bb41-player.scn
+res://player/player.tscn::e36b51754d0be6f003aa4cf6bcbf3540::1773509583::res://.godot/exported/2270303653/export-753d15e03e0182f9d550ac833b42bb41-player.scn
 res://player/reticle.png::c2b12dfca39191d37ef3c6246fe22ecadf58d13b11019c920082ba6ecacd0bd4::1771106862::
 res://Been.png::a3b2302de44d9dbccfc5c851c3443734bc44ee87e9feb6a8c0f1b66deba2d527::1771112746::
-res://game.tscn::14b675c70bfe7a26201d711faa9fae18::1772225308::res://.godot/exported/2270303653/export-609f762188a68253d349ec58c4f3a8d3-game.scn
-res://powerup.tscn::f9501936ffd951cac386067328fda40b::1772225993::res://.godot/exported/2270303653/export-cc072762f388e09eaf9ed13f74a04dcd-powerup.scn
+res://game.tscn::21184b55c64af52ffb3fe2558277c392::1773509535::res://.godot/exported/2270303653/export-609f762188a68253d349ec58c4f3a8d3-game.scn
+res://powerup.tscn::f9501936ffd951cac386067328fda40b::1772998545::res://.godot/exported/2270303653/export-cc072762f388e09eaf9ed13f74a04dcd-powerup.scn
+res://assets/Blood_Blur_1.png::63239eba6c5c18b8dfb475bcf9c52bfba2c04b942015bcf876d2667bdde08721::1773487978::
+res://assets/Castle Vein (from ULTRAKILL) [6X53cXtEuBk].mp3::b40f06fb4673108e8dac77f47b375947943d6c7fad31c858bb8b489a6022cf38::1773507875::
+res://assets/DIE! THY END IS NOW! CRUSH! PERPARE THYSELF! WEAK! (but higher quality) [XeVBnxWXoOk].mp3::bd62278297a4e5dd8587eac4a7abfcb94ceaf665a69f86ee9101a521386e85de::1773506518::
+res://assets/Doom Eternal OST - The Only Thing They Fear Is You (Mick Gordon) [Doom Eternal Theme] [kpnW68Q8ltc].mp3::6095c82afe2a0afb0fadff9482e5f00502c428ca3e2f264420f4a3d026fdfcea::1773505094::
+res://assets/Doom OST - BFG Division [EHM2OIcG8Ok].mp3::14a4ee6be8cc6a4ed8094c3d6f9195da6651d26d2c637cb29bb5b963f0aacfa3::1773507690::
+res://assets/Doom OST - Rip & Tear [vyA1z2A-lhU].mp3::470b7cd5fcf16cf8c9d4c80e3de4ce9775ed7fc70a73f705b665c2313b9b9e0f::1773507690::
+res://assets/Heart_green.png::14ca5830745982dec2007861575a55d3c98c0f2716c6db256839ac7fd3fa814f::1773501306::
+res://assets/Skull.png::e58ee840cc3c77bc1a76dd1f7ff16edd179de602f1edf83dadba2fdf45409acc::1773503208::
+res://assets/Stardew Valley OST - Spring (Wild Horseradish Jam) [7WuKj7a3ces].mp3::f061323199e8290d0198cfa3f87ea6a353efb9a5cf9b4932f51bcad27a3295bf::1773507875::
+res://assets/The Fire Is Gone (For Piano, Saxophone and Trumpet) [917xijnpJVw].mp3::d28e7aa2783cb4ff8c54e8f752cd8ecbc81722ee01fcdbd1a38adc686ee34fac::1773506146::
+res://assets/Versus [BhEnjxYLBYo].mp3::0cfb17b9ecd6d191a3d586879cb201a714258e1e57325ddc3498e52dde4d9a7f::1773505776::
+res://assets/Wednesday morning Bonk it's 9am - MEGABONK OST [rBlPq89wo1k].mp3::9ef11b01a40832958a1b701516c975059dff098ba849bcce0b4c8cef3c50fce5::1773504684::

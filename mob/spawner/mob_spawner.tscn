@@ -12,7 +12,7 @@ mob_to_spawn = ExtResource("2")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 
 [node name="Timer" type="Timer" parent="." unique_id=87505362]
-wait_time = 4.0
+wait_time = 4.5
 autostart = true
 
 [node name="spawner_model" parent="." unique_id=2013655637 instance=ExtResource("3")]

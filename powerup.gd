@@ -21,7 +21,7 @@ func _ready() -> void:
 func spawn_the_orb():
     powerup.show()
     var posRandom = snapped(randf_range(0, 4), 1)
-    print(posRandom)
+    #print(posRandom)
     if posRandom == 1:
         powerup.global_position = posFirst
         

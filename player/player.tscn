@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://32nfeqyqxlh4" path="res://player/simple_gun/gun.gd" id="3"]
 [ext_resource type="AudioStream" uid="uid://bi6ansiu0g7gi" path="res://player/gun_shoot.wav" id="4"]
 [ext_resource type="Texture2D" uid="uid://cuyh8hew637ju" path="res://player/reticle.png" id="5"]
+[ext_resource type="Script" uid="uid://c1ygnt1tg6qs" path="res://player/spd_label.gd" id="6_boad6"]
 [ext_resource type="LabelSettings" uid="uid://dh6j68tlc4bg4" path="res://assets/Labels.tres" id="6_g6k8r"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
@@ -144,6 +145,7 @@ text = "Max speed: 6.0m/s"
 label_settings = ExtResource("6_g6k8r")
 horizontal_alignment = 2
 vertical_alignment = 2
+script = ExtResource("6_boad6")
 
 [node name="Puplabel" type="Label" parent="Labels" unique_id=1759577289]
 unique_name_in_owner = true

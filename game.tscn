@@ -6,8 +6,12 @@
 [ext_resource type="Material" uid="uid://bcmjgnj23t78d" path="res://assets/GrayPlatform.tres" id="4"]
 [ext_resource type="PackedScene" uid="uid://by2aoldt1u7fc" path="res://mob/spawner/mob_spawner.tscn" id="5"]
 [ext_resource type="LabelSettings" uid="uid://dh6j68tlc4bg4" path="res://assets/Labels.tres" id="6"]
-[ext_resource type="AudioStream" uid="uid://cwudeva1iqfrx" path="res://assets/Unstoppable Force [tkLVbp0IH_E].mp3" id="7"]
+[ext_resource type="Texture2D" uid="uid://x3hbinmpuea8" path="res://assets/Heart_green.png" id="7_hve3p"]
+[ext_resource type="Texture2D" uid="uid://n8bp5cg4oj" path="res://assets/Skull.png" id="7_mfdv2"]
 [ext_resource type="PackedScene" uid="uid://yoqaj0kj80bi" path="res://powerup.tscn" id="8_j5wjh"]
+[ext_resource type="Texture2D" uid="uid://coqxlfwu3dbpw" path="res://assets/Blood_Blur_1.png" id="9_vef74"]
+[ext_resource type="AudioStream" uid="uid://bmfl5l71afmxv" path="res://assets/The Fire Is Gone (For Piano, Saxophone and Trumpet) [917xijnpJVw].mp3" id="12_7sc4i"]
+[ext_resource type="AudioStream" uid="uid://bu4y02g0p7fey" path="res://assets/DIE! THY END IS NOW! CRUSH! PERPARE THYSELF! WEAK! (but higher quality) [XeVBnxWXoOk].mp3" id="16_80cx4"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_7jktm"]
 
@@ -25,6 +29,10 @@ fog_light_color = Color(0.22225624, 1.5492085e-07, 5.4147094e-08, 1)
 fog_density = 0.0055
 fog_height = -0.4
 fog_height_density = 0.35
+
+[sub_resource type="LabelSettings" id="LabelSettings_hve3p"]
+font_size = 50
+font_color = Color(0, 0.20392157, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_eow3j"]
 font_size = 90
@@ -44,6 +52,7 @@ font_size = 90
 script = ExtResource("1")
 
 [node name="Killplane" type="Area3D" parent="." unique_id=70020194]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 collision_layer = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Killplane" unique_id=182339382]
@@ -244,7 +253,10 @@ material = ExtResource("3")
 [node name="Spawners" type="Node" parent="." unique_id=2131180596]
 
 [node name="MobSpawner" parent="Spawners" unique_id=120181219 instance=ExtResource("5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34.826366, 0.70000005, -4.1480637)
+transform = Transform3D(0.7071067, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.7071067, 35.826366, 0.70000005, -19.648064)
+
+[node name="MobSpawner2" parent="Spawners" unique_id=1977702121 instance=ExtResource("5")]
+transform = Transform3D(0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, 0.70710677, 35.826366, 0.70000005, 21.851936)
 
 [node name="MobSpawner3" parent="Spawners" unique_id=254123071 instance=ExtResource("5")]
 transform = Transform3D(-4.3711385e-08, 0, 0.99999994, 0, 1, 0, -0.99999994, 0, -4.3711385e-08, 4.626365, 0.70000005, -19.148062)
@@ -256,30 +268,44 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 13.4
 
 [node name="ScoreLabel" type="Label" parent="Labels" unique_id=556180453]
 unique_name_in_owner = true
-anchors_preset = -1
-anchor_top = -0.029320987
-anchor_right = 0.20225695
-anchor_bottom = -0.029320987
-offset_left = 50.0
-offset_top = 56.0
-offset_right = 291.0
-offset_bottom = 144.0
-text = "Score: 0"
+offset_left = 109.0
+offset_top = 10.0
+offset_right = 438.0
+offset_bottom = 79.0
+text = "0"
 label_settings = ExtResource("6")
-metadata/_edit_use_anchors_ = true
+
+[node name="Skull" type="TextureRect" parent="Labels/ScoreLabel" unique_id=840903364]
+layout_mode = 0
+offset_left = -59.0
+offset_top = 9.0
+offset_right = -5.0
+offset_bottom = 66.0
+texture = ExtResource("7_mfdv2")
 
 [node name="HealthLabel" type="Label" parent="Labels" unique_id=1020002261]
 unique_name_in_owner = true
-offset_left = 50.0
+offset_left = 104.0
 offset_top = 97.0
-offset_right = 522.0
-offset_bottom = 166.0
-text = "Health: 5"
-label_settings = ExtResource("6")
+offset_right = 133.0
+offset_bottom = 238.0
+text = "5"
+label_settings = SubResource("LabelSettings_hve3p")
+
+[node name="HeartGreen" type="TextureRect" parent="Labels/HealthLabel" unique_id=1808763842]
+unique_name_in_owner = true
+z_index = -2
+layout_mode = 0
+offset_left = -54.0
+offset_top = -12.0
+offset_right = 81.0
+offset_bottom = 95.0
+texture = ExtResource("7_hve3p")
+expand_mode = 1
+stretch_mode = 4
 
 [node name="GameOverLabel" type="Label" parent="Labels" unique_id=1232295252]
 unique_name_in_owner = true
-visible = false
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -294,7 +320,6 @@ vertical_alignment = 1
 
 [node name="GameOverTextLabel" type="Label" parent="Labels" unique_id=1405265210]
 unique_name_in_owner = true
-visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -308,7 +333,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Oh no! The bats got you!
 Your Score: 0
-Press LMB to restart."
+Your best score: 0"
 label_settings = SubResource("LabelSettings_j5wjh")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -325,31 +350,121 @@ offset_right = 506.5
 offset_bottom = 142.75
 grow_horizontal = 2
 grow_vertical = 2
-text = "Welcome to the BOOM.
-Pres LMB to start."
+text = "BOOM™
+Game by Wilq1
+
+Press LMB to start."
 label_settings = SubResource("LabelSettings_vef74")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="UltrakoolMusicPlayer" type="AudioStreamPlayer" parent="." unique_id=46353587]
-stream = ExtResource("7")
-volume_db = -12.5
+[node name="LeaderLabel" type="Label" parent="Labels" unique_id=1943655247]
+unique_name_in_owner = true
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = -294.0
+offset_right = 369.0
+offset_bottom = 420.0
+grow_vertical = 2
+text = "Leaderboard:
+You - 2137"
+label_settings = ExtResource("6")
+
+[node name="NameInputter" type="LineEdit" parent="Labels" unique_id=1940936733]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -296.0
+offset_top = 281.0
+offset_right = 296.0
+offset_bottom = 421.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 63
+placeholder_text = "Your name?"
+alignment = 1
+max_length = 12
+expand_to_text_length = true
+backspace_deletes_composite_character_enabled = true
+
+[node name="Timer" type="Timer" parent="Labels/NameInputter" unique_id=723376716]
+wait_time = 0.1
+one_shot = true
+ignore_time_scale = true
+
+[node name="BloodBlur1" type="TextureRect" parent="Labels" unique_id=1246703356]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_vef74")
+
+[node name="BloodTimer" type="Timer" parent="Labels/BloodBlur1" unique_id=1384151015]
+unique_name_in_owner = true
+wait_time = 0.3
+one_shot = true
 
 [node name="Powerup" parent="." unique_id=1246467619 instance=ExtResource("8_j5wjh")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 1, 6)
 
+[node name="Audio" type="Node" parent="." unique_id=173336035]
+
+[node name="MenuMusicPlayer" type="AudioStreamPlayer" parent="Audio" unique_id=46353587]
+unique_name_in_owner = true
+stream = ExtResource("12_7sc4i")
+parameters/looping = true
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="Audio" unique_id=2029706008]
+unique_name_in_owner = true
+stream = ExtResource("16_80cx4")
+volume_db = -18.5
+parameters/looping = true
+
+[node name="SecretMusicPlayer" type="AudioStreamPlayer" parent="Audio" unique_id=1422912587]
+unique_name_in_owner = true
+stream = ExtResource("16_80cx4")
+
+[node name="SecretMusicTimer" type="Timer" parent="Audio" unique_id=1914006255]
+wait_time = 5.720000000000001
+
+[connection signal="make_game_harder" from="." to="Spawners/MobSpawner" method="_on_game_make_game_harder"]
+[connection signal="make_game_harder" from="." to="Spawners/MobSpawner2" method="_on_game_make_game_harder"]
+[connection signal="make_game_harder" from="." to="Spawners/MobSpawner3" method="_on_game_make_game_harder"]
+[connection signal="make_game_harder" from="." to="Spawners/MobSpawner4" method="_on_game_make_game_harder"]
 [connection signal="player_died" from="." to="." method="_on_player_died"]
 [connection signal="player_died" from="." to="Player" method="_on_game_player_died"]
+[connection signal="player_fell" from="." to="Player" method="_on_game_player_fell"]
 [connection signal="start_game" from="." to="." method="_on_start_game"]
 [connection signal="start_game" from="." to="Player" method="_on_game_start_game"]
 [connection signal="body_entered" from="Killplane" to="." method="_on_killplane_body_entered"]
 [connection signal="deal_damage_to_player" from="Player" to="." method="_on_player_deal_damage_to_player"]
+[connection signal="paused" from="Player" to="." method="_on_player_paused"]
+[connection signal="unpaused" from="Player" to="." method="_on_player_unpaused"]
 [connection signal="mob_spawned" from="Spawners/MobSpawner" to="." method="_on_mob_spawner_mob_spawned"]
+[connection signal="mob_spawned" from="Spawners/MobSpawner2" to="." method="_on_mob_spawner_mob_spawned"]
 [connection signal="mob_spawned" from="Spawners/MobSpawner3" to="." method="_on_mob_spawner_mob_spawned"]
 [connection signal="mob_spawned" from="Spawners/MobSpawner4" to="." method="_on_mob_spawner_mob_spawned"]
+[connection signal="text_submitted" from="Labels/NameInputter" to="." method="_on_name_inputter_text_submitted"]
+[connection signal="timeout" from="Labels/NameInputter/Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Labels/BloodBlur1/BloodTimer" to="." method="_on_blood_timer_timeout"]
 [connection signal="orb_collected" from="Powerup" to="Player" method="_on_powerup_orb_collected"]
 [connection signal="body_entered" from="Powerup/Area3D" to="Powerup" method="_on_area_3d_body_entered"]
 [connection signal="timeout" from="Powerup/Timer" to="Powerup" method="_on_timer_timeout"]
+[connection signal="timeout" from="Audio/SecretMusicTimer" to="." method="_on_secret_music_timer_timeout"]
 
 [editable path="Powerup"]

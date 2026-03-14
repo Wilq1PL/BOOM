@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://34g3232cwcch"
+path="res://.godot/imported/Doom Eternal OST - The Only Thing They Fear Is You (Mick Gordon) [Doom Eternal Theme] [kpnW68Q8ltc].mp3-d4f45de5f69ba6c6d0c2cca6bcfb16c7.mp3str"
+
+[deps]
+
+source_file="res://assets/Doom Eternal OST - The Only Thing They Fear Is You (Mick Gordon) [Doom Eternal Theme] [kpnW68Q8ltc].mp3"
+dest_files=["res://.godot/imported/Doom Eternal OST - The Only Thing They Fear Is You (Mick Gordon) [Doom Eternal Theme] [kpnW68Q8ltc].mp3-d4f45de5f69ba6c6d0c2cca6bcfb16c7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

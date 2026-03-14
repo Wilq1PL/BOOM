@@ -1,10 +1,16 @@
 extends Area3D
 
 
-const SPEED = 60.0
-const RANGE = 55.0
+const SPEED = 70.0
+const RANGE = 65.0
 
 var travelledDistance = 0.0
+
+func _ready() -> void:
+    var parent = get_parent()
+    #print(parent)
+    global_rotation_degrees = parent.global_rotation_degrees
+
 
 func _physics_process(delta: float) -> void :
     position += transform.basis.z * SPEED * delta

@@ -1,6 +1,9 @@
-Node
-Label
 Timer
+AudioStreamPlayer
+AudioListener3D
+Node
+LineEdit
+Label
 MeshInstance3D
 CollisionShape3D
 Area3D

@@ -2,11 +2,13 @@ extends RigidBody3D
 
 signal died()
 signal add_score()
-
+signal bat_hurt()
 
 var player_inside: = false
 var speed = randf_range(3.0, 6.0)
 var health = randf_range(2.0, 4.0)
+
+var dead := false
 
 @onready var bat_model: Node3D = %bat_model
 @onready var player: CharacterBody3D = get_node("/root/Game/Player")
@@ -22,6 +24,8 @@ func _ready() -> void :
     axis_lock_linear_y = true
     lock_rotation = true
 
+    
+    
 func _physics_process(_delta: float) -> void :
     var direction = global_position.direction_to(player.global_position)
     direction.y = 0.0
@@ -36,22 +40,28 @@ func _physics_process(_delta: float) -> void :
 
 
 func take_damage():
+    var damage = 1 + get_player_velocity(player)/10.0
+    #print(damage)
+    #print(health)
     if not health <= 0:
         hurt_player.play()
     bat_model.hurt()
-    health -= 1
+    health -= damage 
 
     if health <= 0:
+        var died = true
         died_player.play()
         set_physics_process(false)
+
         gravity_scale = 1.0
         var direction = -1.0 * global_position.direction_to(player.global_position)
         var randomUpwardForce = Vector3.UP * randf_range(1.0, 5.0)
         apply_central_impulse(direction * 6.5 + randomUpwardForce)
-        if health >= -1:
+        if not dead:
             puff_timer.start()
             add_score.emit()
             bat_model.died()
+            dead = true
         axis_lock_linear_y = false
         lock_rotation = false
 
@@ -69,3 +79,9 @@ func _on_area_3d_body_exited(body):
     if body.name == player.name:
 
         player_inside = false
+        
+        
+        
+func get_player_velocity(player):
+    var playerVelocity = int(snapped(player.velocity.length(), 1))
+    return playerVelocity
